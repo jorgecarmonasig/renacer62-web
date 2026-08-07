@@ -1,25 +1,205 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@import url('./variables.css');
+
+
+@import url('./variables.css');
+
+/* ========================================
+   BASE
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#F7F9FC;
-    color:#1F2937;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+html {
+    scroll-behavior: smooth;
 }
 
-h1{
-    font-size:3rem;
-    margin-bottom:1rem;
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
 }
 
-p{
-    font-size:1.2rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--font-title);
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.hero h1 {
+    /*El título puede crecer según el ancho de la pantalla, pero nunca será menor 
+    de 3rem ni mayor de 6rem*/
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ========================================
+   LAYOUT
+======================================== */
+
+.container {
+    width: min(90%, var(--max-width));
+    margin-inline: auto;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid rgba(11, 45, 75, 0.08);
+}
+
+.header__content {
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.header__logo span {
+    color: var(--color-secondary);
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.header__nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding-block: 5rem;
+}
+
+.hero__content {
+    max-width: 900px;
+}
+
+.hero__eyebrow {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: var(--color-secondary);
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: -0.04em;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--color-secondary);
+}
+
+.hero__description {
+    max-width: 650px;
+    margin-top: 2rem;
+
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+}
+
+.hero__actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem 1.5rem;
+    border-radius: var(--radius-small);
+
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.button--primary:hover {
+    transform: translateY(-2px);
+}
+
+.button--secondary {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.button--secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
 }

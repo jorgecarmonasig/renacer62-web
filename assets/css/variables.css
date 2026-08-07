@@ -1,0 +1,19 @@
+:root {
+    --color-primary: #0B2D4B; /* Azul profundo */
+    --color-secondary: #B1843B; /* Dorado cálido */
+
+    --color-background: #F6F2EA; /* Crema */
+    --color-surface: #FFFFFF; /* Blanco */
+
+    --color-text: #1B2A38; /* Azul grisáceo oscuro */
+    --color-text-light: #66717C; /* Gris para textos secundarios */
+
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --radius-small: 8px;
+    --radius-medium: 16px;
+    --radius-large: 28px;
+
+    --max-width: 1200px;
+}

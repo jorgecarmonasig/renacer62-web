@@ -1,1 +1,0 @@
-Aquí se almacenarán los iconos públicos del sitio.

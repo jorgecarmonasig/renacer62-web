@@ -1,1 +1,0 @@
-Aquí se almacenarán las imágenes públicas del sitio.

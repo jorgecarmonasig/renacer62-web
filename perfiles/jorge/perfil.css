@@ -129,7 +129,13 @@ body {
     font-weight: 700;
 
     text-decoration: none;
+
+    gap: 0.55rem
 }
+
+    .profile-action i {
+        font-size: 1.05rem;
+    }
 
 .profile-action--primary {
     background-color: var(--color-primary);
@@ -398,6 +404,8 @@ body {
     font-weight: 700;
 
     text-decoration: none;
+
+    gap: 0.6rem;
 }
 
 .contact-button--primary {
@@ -444,4 +452,147 @@ body {
     color: var(--color-primary);
 
     text-decoration: none;
+}
+
+/* ========================================
+   QR
+======================================== */
+
+.profile-qr {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    margin-top: 2rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.profile-qr img {
+    width: 105px;
+    height: 105px;
+
+    padding: 7px;
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+.profile-qr__content {
+    text-align: left;
+}
+
+.profile-qr__content h3 {
+    margin: 0 0 0.4rem;
+
+    font-size: 1rem;
+    color: white;
+}
+
+.profile-qr__content p {
+    margin: 0;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/*Ampliación del QR*/
+.profile-qr__image {
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.profile-qr__image:hover {
+    transform: scale(1.05);
+}
+
+.qr-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background-color: rgba(11, 45, 75, 0.92);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 1000;
+}
+
+.qr-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.qr-modal__content {
+    text-align: center;
+}
+
+.qr-modal__content img {
+    width: min(75vw, 350px);
+    height: auto;
+
+    padding: 12px;
+
+    background-color: white;
+    border-radius: 18px;
+}
+
+.qr-modal__content p {
+    margin: 1rem 0 0;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: white;
+}
+
+.qr-modal__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+
+    padding: 0;
+
+    border: 0;
+    background: none;
+
+    font-size: 2.5rem;
+    line-height: 1;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/*======================================================================
+CELULARES MUY ESTRECHOS
+========================================================================*/
+
+@media (max-width: 380px) {
+
+    .profile-qr {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-qr__content {
+        text-align: center;
+    }
+
 }

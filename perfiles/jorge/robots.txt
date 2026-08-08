@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://renacer62.com/sitemap.xml

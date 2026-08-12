@@ -1,0 +1,1 @@
+Aquí se almacenará el perfil profesional de Miguel Carmona.

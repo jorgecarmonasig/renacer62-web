@@ -15,9 +15,7 @@
 
 body {
     margin: 0;
-
     font-family: Arial, Helvetica, sans-serif;
-
     background-color: var(--color-surface);
     color: var(--color-text);
 }
@@ -29,83 +27,69 @@ body {
 .profile-hero {
     width: min(92%, 520px);
     margin: 2rem auto 1rem;
-
     padding: 3rem 3rem;
-
     text-align: center;
-
     background-color: var(--color-background);
-
     border-radius: 20px;
 }
 
 .profile-hero__photo {
+    display: block;
     width: 150px;
     height: 150px;
-
     margin-inline: auto;
     margin-bottom: 1.75rem;
-
     object-fit: cover;
-
     border-radius: 50%;
-
     border: 4px solid var(--color-surface);
-
     box-shadow:
         0 12px 30px rgba(11, 45, 75, 0.12);
 }
 
 .profile-hero__eyebrow {
     margin: 0 0 0.75rem;
-
     font-size: 0.75rem;
     font-weight: 700;
-
     letter-spacing: 0.12em;
     text-transform: uppercase;
-
     color: var(--color-secondary);
 }
 
 .profile-hero h1 {
     margin: 0;
-
     font-size: clamp(2.4rem, 10vw, 3.5rem);
-    line-height: 1;
-
+    line-height: 1.05;
+    text-wrap: balance;
     color: var(--color-primary);
+}
+
+.profile-hero__headline,
+.profile-section__title,
+.profile-contact__card h2 {
+    text-wrap: balance;
 }
 
 .profile-hero__headline {
     margin: 1.25rem auto 0;
-
     max-width: 430px;
-
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.4;
-
     color: var(--color-primary);
 }
 
 .profile-hero__intro {
     margin: 1.25rem auto 0;
-
     max-width: 450px;
-
     font-size: 0.95rem;
     line-height: 1.7;
-
     color: var(--color-text-light);
 }
 
 .profile-actions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 0.75rem;
-
     margin-top: 2rem;
 }
 
@@ -113,23 +97,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     min-height: 52px;
-
     padding: 0.8rem 1rem;
-
     border: 1px solid rgba(11, 45, 75, 0.15);
     border-radius: 10px;
-
     background-color: var(--color-surface);
-
     color: var(--color-primary);
-
     font-size: 0.9rem;
     font-weight: 700;
-
     text-decoration: none;
-
     gap: 0.55rem
 }
 
@@ -140,8 +116,38 @@ body {
 .profile-action--primary {
     background-color: var(--color-primary);
     color: white;
-
     border-color: var(--color-primary);
+}
+
+/*Animación cuando pasamos el mouse*/
+.profile-action,
+.contact-button,
+.save-contact,
+.profile-footer a {
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.profile-action:hover,
+.contact-button:hover {
+    transform: translateY(-2px);
+}
+
+.save-contact:hover,
+.profile-footer a:hover {
+    opacity: 0.75;
+}
+
+/*Para navegación por teclado*/
+.profile-action:focus-visible,
+.contact-button:focus-visible,
+.save-contact:focus-visible,
+.profile-qr__image:focus-visible,
+.qr-modal__close:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
 }
 
 /*Sobre mí + mis servicios*/
@@ -193,9 +199,9 @@ body {
     color: var(--color-secondary);
 }
 
-.profile-services {
+/* .profile-services {
     background-color: var(--color-surface);
-}
+} */
 
 .profile-services__grid {
     display: grid;
@@ -546,11 +552,10 @@ body {
 .qr-modal__content img {
     width: min(75vw, 350px);
     height: auto;
-
     padding: 12px;
-
     background-color: white;
     border-radius: 18px;
+    max-height: 75vh;
 }
 
 .qr-modal__content p {
@@ -584,6 +589,29 @@ body {
 CELULARES MUY ESTRECHOS
 ========================================================================*/
 
+@media (max-width: 480px) {
+
+    .profile-hero {
+        width: min(94%, 520px);
+        padding: 2rem 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .profile-about,
+    .profile-contact__card {
+        padding: 1.75rem 1.5rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .profile-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 @media (max-width: 380px) {
 
     .profile-qr {
@@ -593,6 +621,21 @@ CELULARES MUY ESTRECHOS
 
     .profile-qr__content {
         text-align: center;
+    }
+
+}
+
+
+/*======================================================================
+PARA USUARIOS QUE TENGAN REDUCCIÓN DE MOVIMIENTO ACTIVADA
+========================================================================*/
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
     }
 
 }

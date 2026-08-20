@@ -1,8 +1,10 @@
-Nombre: Miguel Ángel Carmona Galindo
-Cargo: Bilingual Reporting Analyst
-Profesión: Ingeniero Mecatrónico
-Teléfono: +573218510263
-Correo: miguelcg0604@gmail.com
-Web: https://renacer62.com/perfiles/miguel-carmona/
-LinkedIn: perfil de LinkedIn de Miguel
-Ubicación: Manizales, Colombia
+BEGIN:VCARD
+VERSION:3.0
+N:Carmona Galindo;Miguel Ángel;;;
+FN:Miguel Ángel Carmona Galindo
+TITLE:Bilingual Reporting Analyst
+TEL;TYPE=CELL:+573218510263
+EMAIL;TYPE=INTERNET:miguelcg0604@gmail.com
+ADR;TYPE=WORK:;;Manizales;Caldas;;Colombia
+URL:https://renacer62.com/perfiles/miguel-carmona/
+END:VCARD

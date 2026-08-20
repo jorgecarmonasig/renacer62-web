@@ -1412,6 +1412,54 @@ a {
     text-decoration: underline;
 }
 
+/* QR */
+
+.contact__qr {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.contact__qr img {
+    width: 90px;
+    height: 90px;
+
+    padding: 5px;
+
+    border-radius: 8px;
+
+    background-color: white;
+}
+
+.contact__qr div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.3rem;
+}
+
+.contact__qr span {
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-accent);
+}
+
+.contact__qr strong {
+    max-width: 180px;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+
+    color: white;
+}
+
 /* ========================================
    RESPONSIVE
 ======================================== */
@@ -1619,6 +1667,10 @@ a {
 
     .footer__r62 {
         text-align: left;
+    }
+
+    .contact__qr {
+        display: none;
     }
 
 }

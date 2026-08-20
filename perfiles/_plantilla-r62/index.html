@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- ==========================================
+         SEO (Search Engine Optimization u optimización en motores de búsqueda)
+    =========================================== -->
+
+    <title>{{NOMBRE_COMPLETO}} | {{POSICIONAMIENTO_CORTO}}</title>
+
+    <meta
+        name="description"
+        content="{{META_DESCRIPTION}}"
+    >
+
+    <link
+        rel="canonical"
+        href="https://renacer62.com/perfiles/{{SLUG}}/"
+    >
+
+    <!-- CSS MAESTRO R62 -->
+
+    <link
+        rel="stylesheet"
+        href="../../assets/css/perfil-r62.css"
+    >
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- ==========================================
+         OPEN GRAPH
+    =========================================== -->
+
+    <meta property="og:type" content="profile">
+
+    <meta
+        property="og:url"
+        content="https://renacer62.com/perfiles/{{SLUG}}/"
+    >
+
+    <meta
+        property="og:title"
+        content="{{NOMBRE_COMPLETO}} | Perfil Profesional"
+    >
+
+    <meta
+        property="og:description"
+        content="{{OG_DESCRIPTION}}"
+    >
+
+    <meta
+        property="og:image"
+        content="https://renacer62.com/assets/img/perfiles/{{SLUG}}-social.png"
+    >
+
+
+    <!-- ==========================================
+         TWITTER / X CARD
+    =========================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="{{NOMBRE_COMPLETO}} | Perfil Profesional"
+    >
+
+    <meta
+        name="twitter:description"
+        content="{{OG_DESCRIPTION}}"
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://renacer62.com/assets/img/perfiles/{{SLUG}}-social.png"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="profile">
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="profile-hero">
+
+            <img
+                src="../../assets/img/perfiles/{{SLUG}}.png"
+                alt="{{NOMBRE_COMPLETO}}"
+                class="profile-hero__photo"
+            >
+
+            <p class="profile-hero__eyebrow">
+                {{POSICIONAMIENTO}}
+            </p>
+
+            <h1>{{NOMBRE_COMPLETO}}</h1>
+
+            <p class="profile-hero__headline">
+                {{PROPUESTA_VALOR}}
+            </p>
+
+            <p class="profile-hero__intro">
+                {{INTRODUCCION}}
+            </p>
+
+
+            <!-- ======================================
+                 ACCIONES PRINCIPALES
+
+                 Eliminar los enlaces que no apliquen.
+            ======================================= -->
+
+            <div class="profile-actions">
+
+                <a
+                    href="https://wa.me/{{WHATSAPP}}"
+                    class="profile-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+                <a
+                    href="mailto:{{EMAIL}}"
+                    class="profile-action"
+                >
+                    <i class="fa-regular fa-envelope"></i>
+                    Correo
+                </a>
+
+                <!-- OPCIONAL: eliminar si no tiene LinkedIn -->
+
+                <a
+                    href="{{LINKEDIN_URL}}"
+                    class="profile-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    LinkedIn
+                </a>
+
+                <a
+                    href="{{SLUG}}.vcf"
+                    class="profile-action profile-action--primary"
+                    download
+                >
+                    <i class="fa-regular fa-address-card"></i>
+                    Guardar contacto
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             SOBRE MÍ
+        =========================================== -->
+
+        <section class="profile-section">
+
+            <div class="profile-container profile-about">
+
+                <p class="profile-section__label">
+                    Sobre mí
+                </p>
+
+                <h2>
+                    {{TITULO_SOBRE_MI_1}}
+                    <span>{{TITULO_SOBRE_MI_2}}</span>
+                </h2>
+
+                <p>
+                    {{TEXTO_SOBRE_MI}}
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             SERVICIOS / CAPACIDADES
+             
+             Puede haber 2, 3, 4 o más.
+        =========================================== -->
+
+        <section class="profile-section profile-services">
+
+            <div class="profile-container">
+
+                <p class="profile-section__label">
+                    {{LABEL_SERVICIOS}}
+                </p>
+
+                <div class="profile-services__grid">
+
+
+                    <article class="profile-service">
+
+                        <span>01</span>
+
+                        <h3>{{SERVICIO_1_TITULO}}</h3>
+
+                        <p>
+                            {{SERVICIO_1_TEXTO}}
+                        </p>
+
+                    </article>
+
+
+                    <article class="profile-service">
+
+                        <span>02</span>
+
+                        <h3>{{SERVICIO_2_TITULO}}</h3>
+
+                        <p>
+                            {{SERVICIO_2_TEXTO}}
+                        </p>
+
+                    </article>
+
+
+                    <article class="profile-service">
+
+                        <span>03</span>
+
+                        <h3>{{SERVICIO_3_TITULO}}</h3>
+
+                        <p>
+                            {{SERVICIO_3_TEXTO}}
+                        </p>
+
+                    </article>
+
+
+                    <!--
+                    COPIAR ESTE BLOQUE PARA AGREGAR
+                    SERVICIOS O CAPACIDADES ADICIONALES
+
+                    <article class="profile-service">
+
+                        <span>04</span>
+
+                        <h3>{{SERVICIO_4_TITULO}}</h3>
+
+                        <p>
+                            {{SERVICIO_4_TEXTO}}
+                        </p>
+
+                    </article>
+                    -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             EXPERIENCIA
+
+             OPCIONAL:
+             Puede eliminarse toda esta sección
+             si no aplica al perfil.
+        =========================================== -->
+
+        <section class="profile-section profile-experience">
+
+            <div class="profile-container">
+
+                <p class="profile-section__label">
+                    Experiencia
+                </p>
+
+                <h2 class="profile-section__title">
+                    {{TITULO_EXPERIENCIA_1}}
+                    <span>{{TITULO_EXPERIENCIA_2}}</span>
+                </h2>
+
+
+                <div class="experience-list">
+
+
+                    <article class="experience-item">
+
+                        <span class="experience-item__number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                {{EXPERIENCIA_1_TITULO}}
+                            </h3>
+
+                            <p>
+                                {{EXPERIENCIA_1_TEXTO}}
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <span class="experience-item__number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                {{EXPERIENCIA_2_TITULO}}
+                            </h3>
+
+                            <p>
+                                {{EXPERIENCIA_2_TEXTO}}
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-item">
+
+                        <span class="experience-item__number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                {{EXPERIENCIA_3_TITULO}}
+                            </h3>
+
+                            <p>
+                                {{EXPERIENCIA_3_TEXTO}}
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!--
+                    COPIAR PARA EXPERIENCIAS ADICIONALES
+
+                    <article class="experience-item">
+
+                        <span class="experience-item__number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                {{EXPERIENCIA_4_TITULO}}
+                            </h3>
+
+                            <p>
+                                {{EXPERIENCIA_4_TEXTO}}
+                            </p>
+
+                        </div>
+
+                    </article>
+                    -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             HERRAMIENTAS Y CAPACIDADES
+
+             OPCIONAL:
+             Puede eliminarse si el perfil no necesita
+             mostrar herramientas específicas.
+        =========================================== -->
+
+        <section class="profile-section profile-tools">
+
+            <div class="profile-container">
+
+                <p class="profile-section__label">
+                    {{LABEL_HERRAMIENTAS}}
+                </p>
+
+                <h2 class="profile-section__title">
+                    {{TITULO_HERRAMIENTAS_1}}
+                    <span>{{TITULO_HERRAMIENTAS_2}}</span>
+                </h2>
+
+
+                <div class="tools-groups">
+
+
+                    <div class="tools-group">
+
+                        <h3>{{GRUPO_1_TITULO}}</h3>
+
+                        <div class="tools-tags">
+
+                            <span>{{TAG_1}}</span>
+                            <span>{{TAG_2}}</span>
+                            <span>{{TAG_3}}</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tools-group">
+
+                        <h3>{{GRUPO_2_TITULO}}</h3>
+
+                        <div class="tools-tags">
+
+                            <span>{{TAG_4}}</span>
+                            <span>{{TAG_5}}</span>
+                            <span>{{TAG_6}}</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!--
+                    COPIAR PARA AGREGAR OTRO GRUPO
+
+                    <div class="tools-group">
+
+                        <h3>{{GRUPO_3_TITULO}}</h3>
+
+                        <div class="tools-tags">
+
+                            <span>{{TAG_7}}</span>
+                            <span>{{TAG_8}}</span>
+                            <span>{{TAG_9}}</span>
+
+                        </div>
+
+                    </div>
+                    -->
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CONTACTO
+        =========================================== -->
+
+        <section class="profile-section profile-contact">
+
+            <div class="profile-container profile-contact__card">
+
+                <p class="profile-section__label">
+                    Hablemos
+                </p>
+
+                <h2>
+                    {{CONTACTO_TITULO_1}}
+                    <span>{{CONTACTO_TITULO_2}}</span>
+                </h2>
+
+                <p class="profile-contact__text">
+                    {{CONTACTO_TEXTO}}
+                </p>
+
+
+                <div class="profile-contact__actions">
+
+                    <a
+                        href="https://wa.me/{{WHATSAPP}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-button contact-button--primary"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Escribirme por WhatsApp
+                    </a>
+
+                    <a
+                        href="mailto:{{EMAIL}}"
+                        class="contact-button"
+                    >
+                        <i class="fa-regular fa-envelope"></i>
+                        Enviarme un correo
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="{{SLUG}}.vcf"
+                    download
+                    class="save-contact"
+                >
+                    + Guardar mis datos de contacto
+                </a>
+
+
+                <!-- ==================================
+                     QR
+                =================================== -->
+
+                <div class="profile-qr">
+
+                    <img
+                        src="../../assets/img/perfiles/qr-{{SLUG}}.png"
+                        alt="Código QR del perfil digital de {{NOMBRE_COMPLETO}}"
+                        class="profile-qr__image"
+                        id="qrOpen"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Ampliar código QR"
+                    >
+
+                    <div class="profile-qr__content">
+
+                        <h3>
+                            Comparte mi perfil
+                        </h3>
+
+                        <p>
+                            Escanea este código para abrir
+                            mi perfil digital.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             FOOTER R62
+        =========================================== -->
+
+        <footer class="profile-footer">
+
+            <div class="profile-container">
+
+                <p>
+                    Perfil digital desarrollado por
+                    <a href="../../">
+                        Renacer 62
+                    </a>
+                </p>
+
+            </div>
+
+        </footer>
+
+
+
+        <!-- ==========================================
+             MODAL QR
+        =========================================== -->
+
+        <div
+            class="qr-modal"
+            id="qrModal"
+            aria-hidden="true"
+        >
+
+            <button
+                class="qr-modal__close"
+                id="qrClose"
+                aria-label="Cerrar código QR"
+            >
+                &times;
+            </button>
+
+
+            <div class="qr-modal__content">
+
+                <img
+                    src="../../assets/img/perfiles/qr-{{SLUG}}.png"
+                    alt="Código QR para abrir el perfil digital de {{NOMBRE_COMPLETO}}"
+                >
+
+                <p>
+                    Escanea para abrir mi perfil
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT QR
+    =========================================== -->
+
+    <script>
+
+        const qrOpen = document.querySelector('#qrOpen');
+        const qrModal = document.querySelector('#qrModal');
+        const qrClose = document.querySelector('#qrClose');
+
+
+        function openQR() {
+
+            qrModal.classList.add('is-open');
+
+            qrModal.setAttribute(
+                'aria-hidden',
+                'false'
+            );
+
+        }
+
+
+        function closeQR() {
+
+            qrModal.classList.remove('is-open');
+
+            qrModal.setAttribute(
+                'aria-hidden',
+                'true'
+            );
+
+        }
+
+
+        qrOpen.addEventListener(
+            'click',
+            openQR
+        );
+
+
+        qrClose.addEventListener(
+            'click',
+            closeQR
+        );
+
+
+        qrOpen.addEventListener(
+            'keydown',
+            (event) => {
+
+                if (
+                    event.key === 'Enter' ||
+                    event.key === ' '
+                ) {
+
+                    event.preventDefault();
+
+                    openQR();
+
+                }
+
+            }
+        );
+
+
+        qrModal.addEventListener(
+            'click',
+            (event) => {
+
+                if (event.target === qrModal) {
+
+                    closeQR();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            'keydown',
+            (event) => {
+
+                if (event.key === 'Escape') {
+
+                    closeQR();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

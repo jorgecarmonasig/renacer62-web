@@ -1,1 +1,0 @@
-Aquí se almacenará el perfil profesional de Carlos Botero.

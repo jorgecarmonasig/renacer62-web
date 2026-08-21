@@ -92,14 +92,14 @@ select {
 }
 
 .header__logo {
-    font-family: var(--font-title);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
 }
 
-.header__logo span {
-    color: var(--color-secondary);
+.header__logo img {
+    display: block;
+    width: 120px;
+    height: auto;
 }
 
 .header__nav {
@@ -683,6 +683,17 @@ section {
     color: var(--color-secondary);
 }
 
+.footer__brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer__brand img {
+    display: block;
+    width: 120px;
+    height: auto;
+}
+
 .footer__message {
     font-size: 0.85rem;
 }
@@ -743,6 +754,10 @@ section {
 /* TABLET */
 @media (max-width: 900px) {
 
+    .header__logo img {
+        width: 90px;
+    }
+
     .hero {
         min-height: auto;
         padding-block: 6rem;
@@ -797,9 +812,9 @@ section {
         min-height: 70px;
     }
 
-    .header__logo {
+    /* .header__logo {
         font-size: 1.2rem;
-    }
+    } */
 
     .header__toggle {
     display: block;
@@ -895,15 +910,21 @@ section {
     }
 
     .footer__content {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 1.5rem;
+    }
+
+    .footer__brand img {
+        width: 110px;
     }
 
     .footer__links {
-        flex-wrap: wrap;
+        display: flex;
+        gap: 1.5rem;
     }
-
+    
     .case__detail {
     grid-template-columns: 1fr;
     gap: 1.75rem;

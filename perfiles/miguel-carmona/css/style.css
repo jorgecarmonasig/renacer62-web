@@ -1460,6 +1460,126 @@ a {
     color: white;
 }
 
+.contact__qr-button {
+    flex: 0 0 auto;
+
+    padding: 5px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.contact__qr-button img {
+    display: block;
+
+    width: 90px;
+    height: 90px;
+}
+
+.contact__qr small {
+    margin-top: 0.25rem;
+
+    font-size: 0.7rem;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* QR AMPLIADO */
+
+.qr-modal {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+
+    background-color: rgba(5, 25, 42, 0.92);
+}
+
+.qr-modal.is-open {
+    display: flex;
+}
+
+.qr-modal__content {
+    width: min(100%, 420px);
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    text-align: center;
+}
+
+.qr-modal__content img {
+    display: block;
+
+    width: min(75vw, 320px);
+    height: auto;
+
+    margin: 1.5rem auto;
+}
+
+.qr-modal__content p {
+    margin: 0;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: var(--color-accent);
+}
+
+.qr-modal__content strong {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+.qr-modal__content span {
+    display: block;
+
+    margin-top: 0.4rem;
+
+    font-size: 0.8rem;
+
+    color: var(--color-text-light);
+}
+
+.qr-modal__close {
+    position: absolute;
+
+    top: 1.25rem;
+    right: 1.25rem;
+
+    width: 44px;
+    height: 44px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background-color: white;
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    color: var(--color-primary);
+
+    cursor: pointer;
+}
+
 /* ========================================
    RESPONSIVE
 ======================================== */
@@ -1479,7 +1599,7 @@ a {
     .hero__grid {
         grid-template-columns: 1fr;
 
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .hero__visual {
@@ -1670,7 +1790,22 @@ a {
     }
 
     .contact__qr {
-        display: none;
+        display: flex;
+        align-items: center;
+
+        margin-top: 2rem;
+    }
+
+    .contact__qr img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .hero__visual {
+        order: -1;
+
+        width: min(78%, 360px);
+        margin-inline: auto;
     }
 
 }
@@ -1687,6 +1822,10 @@ a {
 
     .button {
         width: 100%;
+    }
+
+    .hero__visual {
+        width: min(82%, 320px);
     }
 
 }

@@ -1047,6 +1047,16 @@
                             <span aria-hidden="true">↓</span>
                         </a>
 
+                        <a
+                            href="files/miguel-carmona-perfil-profesional.pdf"
+                            class="contact__button contact__button--secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Descargar perfil
+                            <span aria-hidden="true">↓</span>
+                        </a>
+
                     </div>
 
                     <div class="contact__info">
@@ -1070,15 +1080,26 @@
 
                     <div class="contact__qr">
 
-                        <img
-                            src="img/qr-miguel-carmona.png"
-                            alt="Código QR para abrir el Perfil Digital Profesional de Miguel Ángel Carmona Galindo"
+                        <button
+                            class="contact__qr-button"
+                            type="button"
+                            aria-label="Ampliar código QR"
+                            id="openQr"
                         >
+                            <img
+                                src="img/qr-miguel-carmona.png"
+                                alt="Código QR para abrir el Perfil Digital Profesional de Miguel Ángel Carmona Galindo"
+                            >
+                        </button>
 
                         <div>
-                            <span>Perfil Digital Profesional</span>
+                            <span>Compartir perfil</span>
 
-                            <strong>Escanea para abrirlo en tu celular</strong>
+                            <strong>
+                                Escanea este código QR para abrir mi Perfil Digital
+                            </strong>
+
+                            <small>Toca el QR para ampliarlo</small>
                         </div>
 
                     </div>
@@ -1109,6 +1130,66 @@
         </div>
 
     </footer>
+
+    <div
+        class="qr-modal"
+        id="qrModal"
+        aria-hidden="true"
+    >
+        <button
+            class="qr-modal__close"
+            type="button"
+            id="closeQr"
+            aria-label="Cerrar código QR"
+        >
+            ×
+        </button>
+
+        <div class="qr-modal__content">
+
+            <p>Perfil Digital Profesional</p>
+
+            <img
+                src="img/qr-miguel-carmona.png"
+                alt="Código QR del Perfil Digital Profesional de Miguel Ángel Carmona Galindo"
+            >
+
+            <strong>Miguel Ángel Carmona Galindo</strong>
+
+            <span>Escanea para abrir el perfil</span>
+
+        </div>
+    </div>
+
+    <script>
+        const openQr = document.querySelector('#openQr');
+        const closeQr = document.querySelector('#closeQr');
+        const qrModal = document.querySelector('#qrModal');
+
+        openQr.addEventListener('click', () => {
+            qrModal.classList.add('is-open');
+            qrModal.setAttribute('aria-hidden', 'false');
+        });
+
+        closeQr.addEventListener('click', () => {
+            qrModal.classList.remove('is-open');
+            qrModal.setAttribute('aria-hidden', 'true');
+        });
+
+        qrModal.addEventListener('click', (event) => {
+            if (event.target === qrModal) {
+                qrModal.classList.remove('is-open');
+                qrModal.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                qrModal.classList.remove('is-open');
+                qrModal.setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
 
 </body>
 </html>

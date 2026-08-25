@@ -1,0 +1,1467 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-black: #171717;
+    --color-ivory: #F7F3EB;
+    --color-gold: #B5965A;
+    --color-white: #FFFFFF;
+    --color-gray: #746F68;
+
+    --font-title: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    --max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 110px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-black);
+    background-color: var(--color-ivory);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(90%, var(--max-width));
+    margin-inline: auto;
+}
+
+/* Header */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: rgba(247, 243, 235, 0.96);
+    border-bottom: 1px solid rgba(181, 150, 90, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+.header__content {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.header__logo {
+    display: block;
+    width: 180px;
+}
+
+.header__logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__nav a {
+    position: relative;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: var(--color-gold);
+}
+
+.header__toggle {
+    display: none;
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+    cursor: pointer;
+}
+
+.header__toggle span {
+    display: block;
+
+    width: 26px;
+    height: 2px;
+    margin: 5px 0;
+
+    background-color: var(--color-black);
+}
+
+/* Hero */
+
+.hero {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero__content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 4rem;
+
+    padding-block: 5rem;
+}
+
+.hero__eyebrow {
+    margin: 0 0 1.25rem;
+
+    color: var(--color-gold);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.hero__title {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3.8rem, 6vw, 6.5rem);
+    font-weight: 500;
+    line-height: 0.88;
+    letter-spacing: -0.03em;
+}
+
+.hero__title span {
+    display: block;
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.hero__description {
+    max-width: 620px;
+    margin: 2rem 0 0;
+
+    color: var(--color-gray);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 0.9rem 1.6rem;
+
+    border: 1px solid var(--color-black);
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.button--primary {
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.button--primary:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.button--secondary {
+    background-color: transparent;
+}
+
+.button--secondary:hover {
+    color: var(--color-white);
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+/* Hero details */
+
+.hero__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+
+    color: var(--color-gray);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero__details span:not(:last-child)::after {
+    content: "·";
+    margin-left: 1.5rem;
+    color: var(--color-gold);
+}
+
+/* Espacio reservado para producto */
+
+.hero__image {
+    position: relative;
+    min-height: 580px;
+}
+
+.hero__bottle {
+    position: absolute;
+    bottom: 0;
+
+    width: auto;
+    object-fit: contain;
+
+    filter: drop-shadow(0 20px 18px rgba(23, 23, 23, 0.12));
+}
+
+.hero__bottle--100 {
+    z-index: 2;
+    left: 50%;
+    height: 540px;
+
+    transform: translateX(-50%);
+}
+
+.hero__bottle--60 {
+    z-index: 3;
+    left: 6%;
+    height: 430px;
+}
+
+.hero__bottle--30 {
+    z-index: 4;
+    right: 12%;
+    height: 360px;
+}
+
+/* Why Angel's */
+
+.why-angels {
+    padding-block: 7rem;
+
+    color: var(--color-ivory);
+    background-color: var(--color-black);
+}
+
+.why-angels__content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 5rem;
+}
+
+.section-label {
+    margin: 0 0 1.25rem;
+
+    color: var(--color-gold);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.why-angels__heading h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.why-angels__heading h2 span {
+    display: block;
+
+    margin-top: 0.35rem;
+
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.why-angels__reasons {
+    display: grid;
+    gap: 0;
+}
+
+.reason {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+    padding-block: 1.75rem;
+
+    border-top: 1px solid rgba(247, 243, 235, 0.15);
+}
+
+.reason:last-child {
+    border-bottom: 1px solid rgba(247, 243, 235, 0.15);
+}
+
+.reason__number {
+    color: var(--color-gold);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.reason h3 {
+    margin: 0 0 0.6rem;
+
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.reason p {
+    grid-column: 2;
+
+    margin: 0;
+
+    max-width: 560px;
+
+    color: rgba(247, 243, 235, 0.72);
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+/* Fragrances */
+
+.fragrances {
+    padding-block: 7rem;
+    background-color: var(--color-ivory);
+}
+
+.fragrances__content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 5rem;
+}
+
+.fragrances__header h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.fragrances__header h2 span {
+    display: block;
+
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.fragrances__header > p:last-child {
+    max-width: 420px;
+    margin-top: 1.5rem;
+
+    color: var(--color-gray);
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.fragrances__categories {
+    display: grid;
+    gap: 3rem;
+}
+
+.fragrance-category {
+    padding-top: 1.5rem;
+
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+}
+
+.fragrance-category__heading {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.fragrance-category__heading span {
+    color: var(--color-gold);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.fragrance-category__heading h3 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.fragrance-category__note {
+    margin: 1.25rem 0 0;
+
+    color: var(--color-gray);
+
+    font-size: 0.75rem;
+    font-style: italic;
+}
+
+.fragrance-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.fragrance-list a {
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(23, 23, 23, 0.18);
+    font-size: 0.78rem;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.fragrance-list a:hover {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+}
+
+.fragrances__cta {
+    grid-column: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    margin-top: 1rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+}
+
+.fragrances__cta p {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+}
+
+/* Presentations */
+
+.presentations {
+    padding-block: 7rem;
+    background-color: var(--color-white);
+}
+
+.presentations__header {
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+
+    text-align: center;
+}
+
+.presentations__header h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.presentations__header h2 span {
+    display: block;
+
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.presentations__header > p:last-child {
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+
+    color: var(--color-gray);
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.presentations__products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    gap: 2rem;
+}
+
+.presentation {
+    text-align: center;
+}
+
+.presentation__image {
+    height: 420px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    margin-bottom: 2rem;
+}
+
+.presentation__image img {
+    width: auto;
+
+    filter: drop-shadow(0 18px 15px rgba(23, 23, 23, 0.12));
+}
+
+.presentation--30 .presentation__image img {
+    max-height: 260px;
+}
+
+.presentation--60 .presentation__image img {
+    max-height: 320px;
+}
+
+.presentation--100 .presentation__image img {
+    max-height: 390px;
+}
+
+.presentation__info {
+    padding-top: 1.5rem;
+
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+}
+
+.presentation__info > span {
+    color: var(--color-gold);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.presentation__info h3 {
+    margin: 0.4rem 0;
+
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.presentation__info p {
+    max-width: 280px;
+    margin: 0 auto;
+
+    color: var(--color-gray);
+
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+/* Combo */
+
+.combo {
+    padding-block: 7rem;
+    background-color: var(--color-ivory);
+}
+
+.combo__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 6rem;
+}
+
+.combo__visual {
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(181, 150, 90, 0.3);
+}
+
+.combo__placeholder {
+    text-align: center;
+    color: var(--color-gold);
+}
+
+.combo__placeholder span {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.combo__placeholder p {
+    margin: 0.5rem 0 0;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.combo__info h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.combo__info h2 span {
+    display: block;
+
+    margin-top: 0.3rem;
+
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.combo__description {
+    max-width: 500px;
+    margin: 2rem 0;
+
+    color: var(--color-gray);
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.combo__features {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+    padding-block: 1.25rem;
+
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+    border-bottom: 1px solid rgba(181, 150, 90, 0.35);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.combo__features span:nth-child(2) {
+    color: var(--color-gold);
+}
+
+/* Story */
+
+.story {
+    padding-block: 7rem;
+    background-color: var(--color-white);
+}
+
+.story__content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 6rem;
+}
+
+.story__heading h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.story__heading h2 span {
+    display: block;
+
+    margin-top: 0.35rem;
+
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.story__text {
+    padding-top: 2.5rem;
+
+    border-top: 1px solid rgba(181, 150, 90, 0.35);
+}
+
+.story__text p {
+    max-width: 620px;
+    margin: 0 0 1.5rem;
+
+    color: var(--color-gray);
+
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+/* How to buy */
+
+.how-to-buy {
+    padding-block: 7rem;
+
+    color: var(--color-ivory);
+    background-color: var(--color-black);
+}
+
+.how-to-buy__header {
+    max-width: 700px;
+    margin-bottom: 5rem;
+}
+
+.how-to-buy__header h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.how-to-buy__header h2 span {
+    display: block;
+
+    margin-top: 0.3rem;
+
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.how-to-buy__header > p:last-child {
+    max-width: 520px;
+    margin-top: 1.5rem;
+
+    color: rgba(247, 243, 235, 0.72);
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.how-to-buy__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buy-step {
+    min-height: 270px;
+    padding: 1.75rem;
+
+    border-top: 1px solid rgba(247, 243, 235, 0.18);
+    border-right: 1px solid rgba(247, 243, 235, 0.18);
+}
+
+.buy-step:first-child {
+    border-left: 1px solid rgba(247, 243, 235, 0.18);
+}
+
+.buy-step__number {
+    display: block;
+    margin-bottom: 3rem;
+
+    color: var(--color-gold);
+
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.buy-step h3 {
+    margin: 0 0 1rem;
+
+    font-family: var(--font-title);
+    font-size: 1.55rem;
+    font-weight: 500;
+}
+
+.buy-step p {
+    margin: 0;
+
+    color: rgba(247, 243, 235, 0.68);
+
+    font-size: 0.82rem;
+    line-height: 1.75;
+}
+
+/*COMPRAR*/
+.how-to-buy__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    margin-top: 3rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(247, 243, 235, 0.18);
+}
+
+.how-to-buy__action p {
+    margin: 0;
+
+    color: var(--color-ivory);
+
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+}
+
+.button--light {
+    color: var(--color-black);
+    background-color: var(--color-ivory);
+    border-color: var(--color-ivory);
+}
+
+.button--light:hover {
+    color: var(--color-white);
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+/* Contact */
+
+.contact {
+    padding-block: 8rem;
+    text-align: center;
+
+    background-color: var(--color-ivory);
+}
+
+.contact__content {
+    max-width: 850px;
+}
+
+.contact h2 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 500;
+    line-height: 0.9;
+}
+
+.contact h2 span {
+    color: var(--color-gold);
+    font-style: italic;
+}
+
+.contact__description {
+    max-width: 580px;
+    margin: 2rem auto;
+
+    color: var(--color-gray);
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.contact__button {
+    min-width: 240px;
+}
+
+.contact__note {
+    margin: 2rem 0 0;
+
+    color: var(--color-gray);
+
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* Footer */
+
+.footer {
+    padding-block: 4rem 2rem;
+
+    color: var(--color-ivory);
+    background-color: var(--color-black);
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.footer__brand {
+    width: 170px;
+}
+
+.footer__brand img {
+    width: 100%;
+    height: auto;
+}
+
+.footer__tagline {
+    margin: 1.25rem 0 2rem;
+
+    color: var(--color-gold);
+
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+
+    padding-block: 1.5rem;
+
+    border-top: 1px solid rgba(247, 243, 235, 0.15);
+    border-bottom: 1px solid rgba(247, 243, 235, 0.15);
+}
+
+.footer__links a {
+    font-size: 0.75rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.footer__links a:hover {
+    color: var(--color-gold);
+}
+
+.footer__copyright {
+    margin: 2rem 0 0;
+
+    color: rgba(247, 243, 235, 0.5);
+
+    font-size: 0.68rem;
+}
+
+/*RESPONSIVE*/
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .header__content {
+        min-height: 90px;
+    }
+
+    .header__logo {
+        width: 155px;
+    }
+
+    .header__nav {
+        gap: 1.5rem;
+    }
+
+    .header__nav a {
+        font-size: 0.78rem;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: calc(100vh - 90px);
+    }
+
+    .hero__content {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+
+        padding-block: 4rem;
+    }
+
+    .hero__title {
+        font-size: clamp(3.2rem, 7vw, 4.8rem);
+    }
+
+    .hero__description {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .hero__actions {
+        gap: 0.75rem;
+    }
+
+    .button {
+        min-height: 48px;
+        padding-inline: 1.2rem;
+
+        font-size: 0.75rem;
+    }
+
+    .hero__details {
+        gap: 0.7rem 1.4rem;
+
+    }
+
+    .hero__details span:not(:last-child)::after {
+        display: none;
+    }
+
+    /* Frascos */
+
+    .hero__image {
+        min-height: 480px;
+    }
+
+    .hero__bottle--100 {
+        height: 450px;
+    }
+
+    .hero__bottle--60 {
+        left: 2%;
+        height: 350px;
+    }
+
+    .hero__bottle--30 {
+        right: 5%;
+        height: 300px;
+    }
+
+    /*¿Por qué Angels?*/
+    .why-angels__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .why-angels {
+        padding-block: 5rem;
+    }
+
+    /*FRAGANCIAS*/
+    .fragrances__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .fragrances__cta {
+        grid-column: auto;
+    }
+
+    /*PRESENTACIONES*/
+    .presentations {
+        padding-block: 5rem;
+    }
+
+    .presentations__products {
+        gap: 1rem;
+    }
+
+    .presentation__image {
+        height: 320px;
+    }
+
+    .presentation__image img {
+        max-height: 280px;
+    }
+
+    /*COMBO*/
+
+    .combo {
+        padding-block: 5rem;
+    }
+
+    .combo__content {
+        gap: 3rem;
+    }
+
+    .combo__visual {
+        min-height: 440px;
+    }
+
+    /*HISTORIA*/
+    .story {
+        padding-block: 5rem;
+    }
+
+    .story__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .story__text {
+        padding-top: 2rem;
+    }
+
+    /*CÓMO COMPRAR*/
+    .how-to-buy {
+        padding-block: 5rem;
+    }
+
+    .how-to-buy__steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buy-step:nth-child(3) {
+        border-left: 1px solid rgba(247, 243, 235, 0.18);
+    }
+
+}
+
+/* Celular */
+@media (max-width: 650px) {
+
+    /* Header */
+
+    .header__content {
+        min-height: 78px;
+    }
+
+    .header__logo {
+        width: 135px;
+    }
+
+    .header__toggle {
+        display: block;
+        position: relative;
+        z-index: 20;
+    }
+
+    .header__nav {
+        display: none;
+
+        position: absolute;
+        z-index: 10;
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+        padding: 2rem 5%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        background-color: var(--color-ivory);
+        border-bottom: 1px solid rgba(181, 150, 90, 0.25);
+    }
+
+    .header__nav.is-open {
+        display: flex;
+    }
+
+    .header__nav a {
+        font-size: 0.85rem;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        padding-block: 4rem 3rem;
+    }
+
+    .hero__eyebrow {
+        margin-bottom: 1rem;
+
+        font-size: 0.68rem;
+        line-height: 1.6;
+    }
+
+    .hero__title {
+        font-size: clamp(3.2rem, 15vw, 4.5rem);
+        line-height: 0.9;
+    }
+
+    .hero__description {
+        margin-top: 1.75rem;
+
+        font-size: 0.88rem;
+        line-height: 1.75;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .hero__details {
+        gap: 0.8rem 1.2rem;
+        margin-top: 2rem;
+
+        line-height: 1.5;
+    }
+
+    .hero__details span:not(:last-child)::after {
+        display: none;
+    }
+
+    /* Frascos */
+
+    .hero__image {
+        min-height: 360px;
+        width: 100%;
+        max-width: 360px;
+
+        margin: 1rem auto 0;
+    }
+
+    .hero__bottle--100 {
+        left: 50%;
+        height: 350px;
+
+        transform: translateX(-50%);
+    }
+
+    .hero__bottle--60 {
+        left: 5%;
+        height: 270px;
+    }
+
+    .hero__bottle--30 {
+        right: 7%;
+        height: 235px;
+    }
+
+    /*¿Por qué Angels?*/
+    .why-angels {
+        padding-block: 4rem;
+    }
+
+    .why-angels__heading h2 {
+        font-size: 3rem;
+    }
+
+    .reason {
+        grid-template-columns: 38px 1fr;
+        padding-block: 1.4rem;
+    }
+
+    .reason h3 {
+        font-size: 1.4rem;
+    }
+
+    .reason p {
+        font-size: 0.85rem;
+    }
+
+    /*FRAGANCIAS*/
+    .fragrances {
+        padding-block: 4rem;
+    }
+
+    .fragrances__header h2 {
+        font-size: 3rem;
+    }
+
+    .fragrances__cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fragrances__cta .button {
+        width: 100%;
+    }
+
+    /*PRESENTACIONES*/
+    .presentations {
+        padding-block: 4rem;
+    }
+
+    .presentations__header {
+        margin-bottom: 3rem;
+    }
+
+    .presentations__header h2 {
+        font-size: 3rem;
+    }
+
+    .presentations__products {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    /* .presentation__image,
+    .presentation--featured .presentation__image {
+        height: 330px;
+    }
+
+    .presentation__image img,
+    .presentation--featured .presentation__image img {
+        max-height: 310px;
+    } */
+
+    /*COMBO*/
+    .combo {
+        padding-block: 4rem;
+    }
+
+    .combo__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .combo__visual {
+        min-height: 380px;
+    }
+
+    .combo__info h2 {
+        font-size: 3rem;
+    }
+
+    .combo__features {
+        flex-wrap: wrap;
+    }
+
+    /*HISTORIA*/
+    .story {
+        padding-block: 4rem;
+    }
+
+    .story__heading h2 {
+        font-size: 3rem;
+    }
+
+    .story__text p {
+        font-size: 0.88rem;
+    }
+
+    /*CÓMO COMPRAR*/
+    .how-to-buy {
+        padding-block: 4rem;
+    }
+
+    .how-to-buy__header {
+        margin-bottom: 3rem;
+    }
+
+    .how-to-buy__header h2 {
+        font-size: 3rem;
+    }
+
+    .how-to-buy__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .buy-step {
+        min-height: auto;
+
+        border-left: 1px solid rgba(247, 243, 235, 0.18);
+    }
+
+    .buy-step__number {
+        margin-bottom: 1.5rem;
+    }
+
+    /*COMPRAR*/
+    .how-to-buy__action {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+
+        margin-top: 2rem;
+    }
+
+    .how-to-buy__action p {
+        text-align: center;
+    }
+
+    .how-to-buy__action .button {
+        width: 100%;
+    }
+
+    /*CONTACTO*/
+    .contact {
+        padding-block: 5rem;
+    }
+
+    .contact h2 {
+        font-size: 3.8rem;
+    }
+
+    .contact__button {
+        width: 100%;
+    }
+
+    .footer {
+        padding-top: 3rem;
+    }
+
+    .footer__links {
+        width: 100%;
+
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+

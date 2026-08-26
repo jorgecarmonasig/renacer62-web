@@ -286,69 +286,64 @@
                     </h2>
 
                     <p>
-                        Explora algunas de nuestras fragancias disponibles
-                        y consulta por WhatsApp la referencia que estás buscando.
+                        Explora nuestras fragancias por su carácter y las sensaciones que transmiten.
+                        Cuando encuentres la tuya, consúltanos directamente por WhatsApp.
                     </p>
 
                 </div>
 
+                <div class="fragrance-filters" aria-label="Filtros de fragancias">
+
+                    <div class="fragrance-filters__group">
+                        <p class="fragrance-filters__title">¿Para quién?</p>
+
+                        <div class="fragrance-filters__options" role="group" aria-label="Género">
+                            <button class="fragrance-gender-filter is-active" type="button" data-genero="todos" aria-pressed="true">Todas</button>
+                            <button class="fragrance-gender-filter" type="button" data-genero="mujer" aria-pressed="false">Mujer</button>
+                            <button class="fragrance-gender-filter" type="button" data-genero="hombre" aria-pressed="false">Hombre</button>
+                        </div>
+                    </div>
+
+                    <div class="fragrance-filters__divider" aria-hidden="true"></div>
+
+                    <div class="fragrance-filters__group">
+                        <p class="fragrance-filters__title">¿Qué quieres sentir?</p>
+
+                        <div class="fragrance-filters__options" role="group" aria-label="Sensaciones">
+                            <button class="fragrance-filter is-active" type="button" data-sensacion="todas" aria-pressed="true">Todas</button>
+                            <button class="fragrance-filter" type="button" data-sensacion="Frescura" aria-pressed="false">Frescura</button>
+                            <button class="fragrance-filter" type="button" data-sensacion="Elegancia" aria-pressed="false">Elegancia</button>
+                            <button class="fragrance-filter" type="button" data-sensacion="Sensualidad" aria-pressed="false">Sensualidad</button>
+                            <button class="fragrance-filter" type="button" data-sensacion="Energía" aria-pressed="false">Energía</button>
+                            <button class="fragrance-filter" type="button" data-sensacion="Dulzura" aria-pressed="false">Dulzura</button>
+                            <button class="fragrance-filter" type="button" data-sensacion="Intensidad" aria-pressed="false">Intensidad</button>
+                        </div>
+                    </div>
+
+                    <p class="fragrance-filters__status" id="filtro-estado" aria-live="polite"></p>
+                </div>
+
                 <div class="fragrances__categories">
 
-                    <div class="fragrance-category">
+                    <div class="fragrance-category" id="categoria-mujer">
 
                         <div class="fragrance-category__heading">
                             <span>01</span>
                             <h3>Mujer</h3>
                         </div>
 
-                        <div class="fragrance-list">
-                            <a
-                                href="https://wa.me/573116435729?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20la%20fragancia%20Chance%20de%20Angel%27s."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Chance
-                            </a>
-                            <a
-                                href="https://wa.me/573116435729?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20la%20fragancia%20Paris%20Hilton%20de%20Angel%27s."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Paris Hilton
-                            </a>
-                            <a
-                                href="https://wa.me/573116435729?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20la%20fragancia%20Good%20Girl%20de%20Angel%27s."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Good Girl
-                            </a>
-                            <a
-                                href="https://wa.me/573116435729?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20la%20fragancia%20212%20de%20Angel%27s."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                212
-                            </a>
-                            <p class="fragrance-category__note">
-                                Más referencias disponibles. Consúltanos por WhatsApp.
-                            </p>
-                        </div>
+                        <div class="fragrance-list" id="fragancias-mujer"></div>
 
                     </div>
 
-                    <div class="fragrance-category">
+                    <div class="fragrance-category" id="categoria-hombre">
 
                         <div class="fragrance-category__heading">
                             <span>02</span>
                             <h3>Hombre</h3>
                         </div>
 
-                        <div class="fragrance-list">
-                            <p class="fragrance-category__note">
-                                Consulta nuestras referencias disponibles para hombre.
-                            </p>
-                        </div>
+                        <div class="fragrance-list" id="fragancias-hombre"></div>
 
                     </div>
 
@@ -716,7 +711,24 @@
 
     </main>
 
+    <dialog class="character-modal" id="modal-caracter" aria-labelledby="modal-caracter-titulo">
+        <div class="character-modal__content">
+            <button class="character-modal__close" id="modal-caracter-cerrar" type="button" aria-label="Cerrar descripción">×</button>
+            <p class="character-modal__eyebrow">El carácter de esta fragancia</p>
+            <h3 class="character-modal__title" id="modal-caracter-titulo"></h3>
+            <p class="character-modal__fragrance" id="modal-caracter-fragancia"></p>
+            <div class="character-modal__divider" aria-hidden="true"></div>
+            <p class="character-modal__description" id="modal-caracter-descripcion"></p>
+            <p class="character-modal__sensations-title">Sensaciones</p>
+            <div class="character-modal__sensations" id="modal-caracter-sensaciones"></div>
+        </div>
+    </dialog>
+
+    <script src="js/catalogo.js"></script>
     <script src="js/app.js"></script>
+
+
+
 
 </body>
 </html>

@@ -361,6 +361,55 @@ section {
     color: var(--color-text-light);
 }
 
+/* Diagnóstico de procesos (llamada al cuestionario) */
+.services__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+
+    margin-top: 4rem;
+    padding: 3rem;
+    border-radius: var(--radius-medium);
+    background-color: var(--color-background);
+}
+
+.services__cta-text {
+    max-width: 680px;
+}
+
+.services__cta h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.services__cta p {
+    color: var(--color-text-light);
+}
+
+.services__cta .section-label {
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+
+.services__cta-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.services__cta .button {
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .services__cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+}
+
 /* ========================================
    EXPERIENCE
 ======================================== */

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tu página web profesional | Renacer 62</title>
+
+    <meta name="description" content="Diseñamos tu página web profesional a partir de lo que quieres comunicar: elegante, clara y adaptada a computador y celular.">
+    <meta name="author" content="Renacer 62">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://renacer62.com/pagina-web/">
+    <meta property="og:title" content="Tu página web profesional | Renacer 62">
+    <meta property="og:description" content="Una página web que expresa lo que tu negocio quiere decir.">
+    <meta property="og:image" content="https://renacer62.com/assets/img/renacer62-social.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="canonical" href="https://renacer62.com/pagina-web/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <style>
+        .pd-hero { padding-block: 6rem 4rem; }
+        .pd-hero .container { max-width: 900px; }
+        .pd-hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); letter-spacing: -0.035em; }
+        .pd-hero h1 span { display: block; color: var(--color-secondary); }
+        .pd-hero p.lead { max-width: 650px; margin-top: 1.5rem; font-size: 1.15rem; color: var(--color-text-light); }
+        .pd-hero .hero__actions { flex-wrap: wrap; }
+
+        .pd-steps { padding-block: 5rem; background: var(--color-primary); }
+        .pd-steps h2 { color: var(--color-surface); font-size: clamp(2rem, 4vw, 3rem); max-width: 700px; }
+        .pd-steps__grid { display: grid; gap: 1.25rem; margin-top: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        .pd-step { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-medium); padding: 1.75rem; }
+        .pd-step b { font-family: var(--font-title); font-size: 2.2rem; color: var(--color-secondary); line-height: 1; }
+        .pd-step h3 { color: var(--color-surface); font-size: 1.2rem; margin: .6rem 0 .4rem; }
+        .pd-step p { color: rgba(255,255,255,.78); font-size: .97rem; margin: 0; }
+
+        .pd-form { padding-block: 5rem; }
+        .pd-form h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        .pd-form .intro { max-width: 640px; margin: 1rem 0 2rem; color: var(--color-text-light); }
+        .pd-form__box { background: var(--color-surface); border: 1px solid rgba(11,45,75,.1); border-radius: var(--radius-medium); overflow: hidden; }
+        .pd-form__box iframe { display: block; width: 100%; height: 1600px; border: 0; }
+        .pd-form__alt { margin-top: 1rem; font-size: .92rem; color: var(--color-text-light); }
+        .pd-form__alt a { color: var(--color-secondary); font-weight: 600; }
+
+        .pd-notify { padding-block: 5rem; background: var(--color-surface); text-align: center; }
+        .pd-notify h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+        .pd-notify p { max-width: 560px; margin: 1rem auto 2rem; color: var(--color-text-light); }
+        .pd-notify__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        @media (max-width: 640px) {
+            .pd-hero { padding-block: 3.5rem 2.5rem; }
+            .pd-form__box iframe { height: 1900px; }
+            .pd-hero .button, .pd-notify .button { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header__content">
+            <a href="/" class="header__logo" aria-label="Renacer 62 - Inicio">
+                <img src="/assets/brand/r62-logo-principal.svg" alt="Renacer 62">
+            </a>
+
+            <button class="header__toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="header__nav" id="main-navigation">
+                <a href="/#filosofia">Filosofía</a>
+                <a href="/#servicios">Servicios</a>
+                <a href="/#perfiles">Perfiles</a>
+                <a href="/#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="pd-hero">
+            <div class="container">
+                <p class="hero__eyebrow">Páginas web profesionales</p>
+                <h1>
+                    Tu negocio merece
+                    <span>una página a su altura.</span>
+                </h1>
+                <p class="lead">
+                    Diseñamos páginas web informativas y de promoción, pensadas desde lo que tú quieres lograr: el tono, el estilo y la acción que esperas de quien te visita. Se ven bien en computador y en celular.
+                </p>
+                <div class="hero__actions">
+                    <a href="#formulario" class="button button--primary">Quiero mi página web</a>
+                    <a href="/" class="button button--secondary">Conoce Renacer 62</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pd-steps">
+            <div class="container">
+                <p class="section-label">Cómo funciona</p>
+                <h2>Tú cuentas tu historia. Nosotros hacemos el resto.</h2>
+
+                <div class="pd-steps__grid">
+                    <div class="pd-step">
+                        <b>1</b>
+                        <h3>Llenas el formulario</h3>
+                        <p>Preguntas sobre tu negocio, el propósito de la página y el estilo que imaginas. Toma unos 15 minutos.</p>
+                    </div>
+                    <div class="pd-step">
+                        <b>2</b>
+                        <h3>Diseñamos tu página</h3>
+                        <p>Con tus respuestas te proponemos estructura, tono, colores y contenidos a tu medida.</p>
+                    </div>
+                    <div class="pd-step">
+                        <b>3</b>
+                        <h3>Lo revisas y se publica</h3>
+                        <p>Antes de publicar puedes pedir ajustes. Después tu página queda en línea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pd-form" id="formulario">
+            <div class="container">
+                <p class="section-label">Formulario</p>
+                <h2>Cuéntanos sobre ti</h2>
+                <p class="intro">Cuéntanos qué quieres lograr, cómo quieres verte y a quién quieres llegar. Cuando termines, avísanos con los botones que aparecen más abajo.</p>
+
+                <p class="pd-form__alt" style="margin:0 0 1rem">Por ahora desarrollamos páginas informativas y de promoción; las tiendas en línea todavía no hacen parte de nuestro servicio.</p>
+
+                <div class="pd-form__box">
+                    <iframe
+                        title="Formulario Página Web Profesional R62"
+                        loading="lazy"
+                        src="URL_FORMULARIO_PAGINA_WEB?embedded=true">
+                        Cargando…
+                    </iframe>
+                </div>
+
+                <p class="pd-form__alt">
+                    ¿No se ve bien en tu celular?
+                    <a href="URL_FORMULARIO_PAGINA_WEB" target="_blank" rel="noopener noreferrer">Ábrelo en una pestaña nueva</a>.
+                </p>
+            </div>
+        </section>
+
+        <section class="pd-notify">
+            <div class="container">
+                <p class="section-label">Último paso</p>
+                <h2>¿Ya enviaste el formulario?</h2>
+                <p>Avísanos por el medio que prefieras y empezamos a revisar tu propuesta.</p>
+
+                <div class="pd-notify__btns">
+                    <a class="button button--primary" target="_blank" rel="noopener noreferrer"
+                       href="https://wa.me/573148454527?text=Hola%2C%20acabo%20de%20enviar%20el%20formulario%20para%20mi%20p%C3%A1gina%20web.">
+                        Avisar por WhatsApp
+                    </a>
+                    <a class="button button--secondary"
+                       href="mailto:jorgecarmonasig@gmail.com?subject=Formulario%20enviado%20-%20P%C3%A1gina%20web&body=Hola%2C%20acabo%20de%20enviar%20el%20formulario%20para%20mi%20p%C3%A1gina%20web.%0A%0AMi%20nombre%3A%20">
+                        Avisar por correo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__content">
+            <a href="/" class="footer__brand" aria-label="Renacer 62 - Inicio">
+                <img src="/assets/brand/r62-logo-negativo.svg" alt="Renacer 62">
+            </a>
+            <p class="footer__message">Información que transforma organizaciones.</p>
+            <p class="footer__copyright">© 2026 Renacer 62</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
